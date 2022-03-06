@@ -1,15 +1,16 @@
 import './ExpenseItem.css';
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+    
     return (
         <div className="expense-item">
-            <div>March 28th, 2022</div>
+            <div>{props.date.toISOString()}</div>
             <div className="expense-item_description">
                 <h2>
-                    Car Insurance
+                    {props.title}
                 </h2>
                 <div className="expense-item__price">
-                    $294.67
+                    ${props.amount}
                 </div>
             </div>
         </div>
