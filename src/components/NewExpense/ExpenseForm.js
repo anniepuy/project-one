@@ -5,7 +5,7 @@ const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
-    //alternative state usecase below
+    //alternative single object use state usecase below
     /*const[userInput, setUserInput] = useState({
         enteredTitle: '',
         enteredAmount: '',
