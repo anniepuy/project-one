@@ -10,7 +10,23 @@ const Expenses= (props) => {
     const filterChangeHandler = selectedYear => {
         setFilteredYear(selectedYear);
     };
+//dynamic updates based on user input
+    return (
+        <div>
+            <Card className="expenses" >
+                <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+                {props.items.map((expense) => (
+                    <ExpenseItem 
+                        title ={expense.title} 
+                        amount={expense.amount} 
+                        date={expense.date}
+                    />
+                ))}
+            </Card>
+        </div>
+    );
     
+/* hard coded example of expenses
     return (
         <div>
             <Card className="expenses" >
@@ -22,6 +38,7 @@ const Expenses= (props) => {
             </Card>
         </div>
     );
+*/
 }
 
 export default Expenses;
